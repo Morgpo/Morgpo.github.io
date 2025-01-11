@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #050822;
-    color: #f0f0f0;
+    background-color: #333;
+    color: #ccc;
     margin: 0;
     padding: 0;
     display: flex;
@@ -15,12 +15,13 @@ body {
     margin: 0 auto;
 }
 
-.lockforge {
+.title {
     font-size: 100px;
     margin-bottom: 16px;
+    background-color: #444;
 }
 
-.password-manager {
+.subtitle {
     font-size: 42px;
     margin-bottom: 42px;
 }
@@ -29,7 +30,7 @@ body {
     margin: 20px auto;
     width: 25%;
     padding: 20px;
-    background-color: #2e2e2e;
+    background-color: #555;
     border-radius: 10px;
     font-size: 18px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
