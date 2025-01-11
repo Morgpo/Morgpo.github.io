@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple Links</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LockForge Password Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', path='icon.ico') }}" type="image/x-icon">
 </head>
 <body>
-  <h1>My Site</h1>
-  <p>Check out these pages:</p>
-  <ul>
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-  </ul>
+    <div class="container">
+        <div class="lockforge">
+            LockForge
+        </div>
+        <div class="password-manager">
+            Password Manager
+        </div>
+        <div class="main-menu">
+            <a href="{{ url_for('account.save_account_get') }}">Save Account</a>
+        </div>
+        <div class="main-menu">
+            <a href="{{ url_for('account.manage_accounts') }}">Manage Accounts</a>
+        </div>
+    </div>
 </body>
 </html>

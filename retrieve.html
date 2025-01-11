@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', path='icon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Account Details</h1>
+        <h3>{{ account_name }}</h3>
+        <div class="details-list">
+            <ul>
+                {% for key, value in account_data.items() %}
+                    <li><span class="detail-key">{{ key }}:</span> <span class="detail-value">{{ value }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <br>
+        <a href="{{ url_for('account.edit_account', account_name=account_name) }}">Edit Account</a>
+        <br><br>
+        <a href="{{ url_for('account.delete_account', account_name=account_name) }}">Delete Account</a>
+        <br>
+        <br>
+        <a href="{{ url_for('account.manage_accounts') }}">Back to Manage Accounts</a>
+    </div>
+</body>
+</html>
