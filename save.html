@@ -8,7 +8,7 @@
     <link rel="icon" href="./static/icon.ico" type="image/x-icon">
     <script>
         function generatePassword() {
-            fetch('{{ url_for("account.generate_password") }}')
+            fetch('password_generator.py')
                 .then(response => response.json())
                 .then(data => {
                     document.getElementById('password').value = data.password;
