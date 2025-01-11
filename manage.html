@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Accounts</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
-    <link rel="icon" href="{{ url_for('static', path='icon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="icon" href="static/icon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -13,13 +13,13 @@
         <div class="account-list">
             <ul>
                 {% for account in accounts %}
-                    <li><a href="{{ url_for('account.retrieve_account', account_name=account) }}">{{ account }}</a></li>
+                    <li><a href="retrieve.html">{{ account }}</a></li>
                 {% endfor %}
                 <br><br>
             </ul>
         </div>
         <br>
-        <a href="{{ url_for('account.index') }}">Back to Main Menu</a>
+        <a href="index.html">Back to Main Menu</a>
     </div>
 </body>
 </html>
