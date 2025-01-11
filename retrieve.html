@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Details</title>
-    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
-    <link rel="icon" href="{{ url_for('static', path='icon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" href="./static/icon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
@@ -19,12 +19,12 @@
             </ul>
         </div>
         <br>
-        <a href="{{ url_for('account.edit_account', account_name=account_name) }}">Edit Account</a>
+        <a href="edit.html">Edit Account</a>
         <br><br>
-        <a href="{{ url_for('account.delete_account', account_name=account_name) }}">Delete Account</a>
+        <a href="delete.html">Delete Account</a>
         <br>
         <br>
-        <a href="{{ url_for('account.manage_accounts') }}">Back to Manage Accounts</a>
+        <a href="manage.html">Back to Manage Accounts</a>
     </div>
 </body>
 </html>
