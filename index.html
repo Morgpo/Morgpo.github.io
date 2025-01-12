@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LockForge Password Manager</title>
-    <link rel="stylesheet" href="./static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Communication Test</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            Project Hub
-        </div>
-        <div class="subtitle">
-            by Morgan Rupert
-        </div>
-        <div class="main-menu">
-            <a href="./LockForge/index.html">LockForge</a>
-        </div>
-        <div class="main-menu">
-            <a href="./Pokemon/index.html">Coming Soon</a>
-        </div>
-        <div class="main-menu">
-            <a href="./EldenRing/index.html">Coming Later</a>
-        </div>
-    </div>
+  <h1>Testing Backend Communication</h1>
+  <button id="pingButton">Ping Backend</button>
+  <p id="response"></p>
+
+  <script>
+    const backendUrl = "http://130.45.24.10:8080"; // Replace with your public IP or domain
+
+    document.getElementById("pingButton").addEventListener("click", () => {
+      fetch(`${backendUrl}/ping`)
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("response").textContent = `Response from backend: ${data.message}`;
+        })
+        .catch(error => {
+          document.getElementById("response").textContent = `Error: ${error.message}`;
+        });
+    });
+  </script>
 </body>
 </html>
