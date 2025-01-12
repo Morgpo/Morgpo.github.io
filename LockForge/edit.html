@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link rel="icon" href="./static/icon.ico" type="image/x-icon">
+    <script>
+        function generatePassword() {
+            fetch('password_generator.py')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('password').value = data.password;
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Account</h1>
+        <form method="POST">
+            <label>Account Name:</label>
+            <small style="font-style: italic;">This field cannot be edited</small><br>
+            <input type="text" name="account_name" value="{{ account_name }}" readonly>    
+            <label>Username:</label>
+            <input type="text" name="username" value="{{ account_data['Username'] }}"><br>
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ account_data['Email'] }}"><br>
+            <label>Password:</label>
+            <input type="text" name="password" id="password" value="{{ account_data['Password'] }}"><br>
+            <button type="button" onclick="generatePassword()">Generate Password</button><br><br>
+            <label>Misc Notes (Optional):</label>
+            <input type="text" name="misc_notes" value="{{ account_data['Misc Notes'] }}"><br>
+            <button type="submit">Save</button>
+        </form>
+        <br>
+        <a href="index.html">Back to Account Details</a>
+    </div>
+</body>
+</html>

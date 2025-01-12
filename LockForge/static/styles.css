@@ -1,0 +1,219 @@
+/* Add this at the top of your CSS file */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    form, .details-list, .account-list, .main-menu {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .lockforge {
+        font-size: 60px;
+    }
+
+    .password-manager {
+        font-size: 24px;
+    }
+}
+
+/* Existing styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #050822;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #00bfff;
+    margin-bottom: 16px;
+    font-size: 54px;
+}
+
+a {
+    color: #00bfff;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    width: 75%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00bfff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+}
+
+button {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3b3b3b;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;    
+    margin: 20px auto;
+    width: 50%;
+    max-height: 300px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.container {
+    width: 50%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.lockforge {
+    color: #00bfff;
+    text-shadow: 0 0 10px rgb(46, 46, 46);
+    margin-bottom: 16px;
+    font-size: 100px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.password-manager {
+    color: #00bfff;
+    text-shadow: 0 0 10px rgb(46, 46, 46);
+    margin-bottom: 42px;
+    font-size: 42px;
+}
+
+.main-menu {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    width: 25%;
+    font-size: 18px;
+}
+
+.details-list {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    width: 500px;
+}
+
+.details-list ul {
+    list-style-type: none;
+    padding: 0;
+    width: 400px;
+}
+
+.details-list li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+}
+
+.detail-key {
+    font-style: italic;
+    color: #00bfff;
+}
+
+.detail-value {
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.account-list {
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.account-list::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.account-list::-webkit-scrollbar-track {
+    background: #1f1f1f; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+.account-list::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 3px solid #1f1f1f; /* Padding around the thumb */
+}
+
+.account-list::-webkit-scrollbar-thumb:hover {
+    background-color: #888; /* Color of the scrollbar thumb on hover */
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: -9px;
+    margin-bottom: 10px;
+}
