@@ -1,7 +1,4 @@
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
-import random
-import string
 
 app = FastAPI()
 
@@ -18,4 +15,10 @@ async def generate_password():
 @app.get("/api/fetch_accounts")
 async def fetch_accounts(): 
     # Needs to send a JSON response of all the account names
+    pass
+
+@app.get("/api/dropbox_auth")
+async def dropbox_auth():
+    # Implement the dropbox OAuth2 flow here
+    # Have the RedirectURI be morgpo.github.io/LockForge/index
     pass
