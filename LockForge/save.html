@@ -6,15 +6,6 @@
     <title>Save Account</title>
     <link rel="stylesheet" href="./static/styles.css">
     <link rel="icon" href="./static/icon.ico" type="image/x-icon">
-    <script>
-        function generatePassword() {
-            fetch('password_generator.py')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('password').value = data.password;
-                });
-        }
-    </script>
 </head>
 <body>
     <div class="container">
@@ -22,9 +13,8 @@
         <form method="POST">
             <label>Account Name:</label>
             <input type="text" name="account_name" required><br>
-            {% if error %}
-                <div class="error">{{ error }}</div>
-            {% endif %}
+            <!-- Need to add check to see if account name exists already -->
+            <!-- Probably do that after the list account logic is implemented -->
             <label>Username:</label>
             <input type="text" name="username"><br>
             <label>Email:</label>
@@ -39,5 +29,12 @@
         <br>
         <a href="index.html">Back to Main Menu</a>
     </div>
+    <script src="./src/generate_password.js"></script>
+    <script>
+        async function generatePassword() {
+            const password = await generate_password();
+            document.getElementById('password').value = password;
+        }
+    </script>
 </body>
 </html>

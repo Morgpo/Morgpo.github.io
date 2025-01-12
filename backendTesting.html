@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Communication Test</title>
+</head>
+<body>
+  <h1>Testing Backend Communication</h1>
+  <button id="pingButton">Ping Backend</button>
+  <p id="response"></p>
+  
+<script src="./static/config.js"></script>
+<script>
+  document.getElementById("pingButton").addEventListener("click", () => {
+    fetch(`${config.backendUrl}/ping`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("response").textContent = `Response from backend: ${data.message}`;
+      })
+      .catch(error => {
+        document.getElementById("response").textContent = `Error: ${error.message}`;
+      });
+  });
+</script>
+</body>
+</html>

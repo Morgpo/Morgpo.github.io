@@ -11,15 +11,30 @@
     <div class="container">
         <h1>Manage Accounts</h1>
         <div class="account-list">
-            <ul>
-                {% for account in accounts %}
-                    <li><a href="retrieve.html">{{ account }}</a></li>
-                {% endfor %}
-                <br><br>
+            <ul id="account-list">
+                <!-- Account names will be populated here by JavaScript -->
             </ul>
         </div>
         <br>
         <a href="index.html">Back to Main Menu</a>
     </div>
+    <script src="./src/fetch_accounts.js"></script>
+    <script>
+        async function loadAccounts() {
+            const accounts = await fetch_accounts();
+            const accountList = document.getElementById('account-list');
+            accounts.forEach(account => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = 'retrieve.html';
+                link.textContent = account;
+                listItem.appendChild(link);
+                accountList.appendChild(listItem);
+            });
+        }
+
+        // Load accounts when the page loads
+        window.onload = loadAccounts;
+    </script>
 </body>
 </html>
