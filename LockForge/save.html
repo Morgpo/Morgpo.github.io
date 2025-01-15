@@ -29,8 +29,20 @@
         <br>
         <a href="index.html">Back to Main Menu</a>
     </div>
-    <script src="./src/generate_password.js"></script>
-    <script>
+    <script type="module">
+        import { config } from './static/config.js';
+
+        const generate_password = async () => {
+            const response = await fetch(config.backendUrl + '/api/generate_password', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json();
+            return data.password;
+        };
+
         async function generatePassword() {
             const password = await generate_password();
             document.getElementById('password').value = password;
