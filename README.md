@@ -10,4 +10,4 @@
 
 
 ## Elden Ring Builds (Coming Much Later)
-- Just have some vague ideas of what I want to do here
+- Just have some vague ideas of what I want to do herew
