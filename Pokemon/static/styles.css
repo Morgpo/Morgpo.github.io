@@ -12,13 +12,14 @@ body {
 }
 
 h1 {
-    color: #00bfff;
+    color: yellow;
+    text-shadow: 0 0 10px rgb(46, 46, 46);
     margin-bottom: 16px;
     font-size: 54px;
 }
 
 a {
-    color: #00bfff;
+    color: yellow;
     text-decoration: none;
     margin: 10px;
 }
@@ -42,22 +43,9 @@ label {
     color: #00bfff;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1f1f1f;
-    color: #f0f0f0;
-}
-
 button {
     background-color: #1f1f1f;
-    color: #f0f0f0;
+    color: yellow;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -90,8 +78,8 @@ li {
     text-align: center;
 }
 
-.pokemon {
-    color: #00bfff;
+.title {
+    color: yellow;
     text-shadow: 0 0 10px rgb(46, 46, 46);
     margin-bottom: 16px;
     font-size: 100px;
@@ -99,11 +87,11 @@ li {
     text-decoration: underline;
 }
 
-.type-calculator {
-    color: #00bfff;
+.subtitle {
+    color: yellow;
     text-shadow: 0 0 10px rgb(46, 46, 46);
     margin-bottom: 42px;
-    font-size: 42px;
+    font-size: 48px;
 }
 
 .main-menu {
@@ -116,39 +104,42 @@ li {
     font-size: 18px;
 }
 
-.details-list {
-    background-color: #2e2e2e;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin: 20px auto;
-    width: 500px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.details-list ul {
-    list-style-type: none;
-    padding: 0;
-    width: 400px;
+.form-group1 {
+    margin-bottom: 20px;
 }
 
-.details-list li {
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.form-group label {
+    display: block;
+    margin-bottom: 0px;
+    color: yellow;
+}
+
+.form-group input {
+    width: 75%;
     padding: 10px;
-    background-color: #1f1f1f;
+    border: none;
     border-radius: 5px;
+    background-color: #1f1f1f;
+    color: yellow;
 }
 
-.detail-key {
-    font-style: italic;
-    color: #00bfff;
+.form-group1 label {
+    display: block;
+    margin-bottom: 0px;
+    color: yellow;
 }
 
-.detail-value {
-    font-weight: bold;
-    color: #f0f0f0;
+.form-group1 input {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: yellow;
 }
 
 .error {

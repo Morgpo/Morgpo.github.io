@@ -1,3 +1,0 @@
-const config = {
-    backendUrl: "[redacted]"
-  };
