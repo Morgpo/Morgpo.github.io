@@ -3,29 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Hub</title>
-    <link rel="stylesheet" href="./static/styles.css">
-    <link rel="icon" href="./static/mark.ico" type="image/x-icon">
+    <title>Morgan Rupert | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            Project Hub
-        </div>
-        <div class="subtitle">
-            by Morgan Rupert
-        </div>
-        <div class="main-menu">
-            <a href="./Pokemon/soon.html">Coming Soon</a>
-        </div>
-        <div class="main-menu">
-            <a href="./LockForge/soon.html">Coming Later</a>
-            <!-- Have this redirect to dropbox OAuth2 instead -->
-            <!-- Then have the RedirectURI be morgpo.github.io/LockForge/index -->
-        </div>
-        <div class="main-menu">
-            <a href="./EldenRing/soon.html">Coming Much Later</a>
-        </div>
-    </div>
+    <header>
+        <nav>
+            <div class="logo">Morgan Rupert</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to My Personal Website</h1>
+            <p>I'm a developer passionate about creating modern web experiences.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>A brief description of who I am and what I do.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>LockForge</h3>
+                    <p>Account manager powered by Dropbox.</p>
+                    <a href="https://www.dropbox.com" class="btn" target="_blank" rel="noopener noreferrer">Coming Soon</a>
+                </div>
+                <div class="project">
+                    <h3>Pokemon Type Battle</h3>
+                    <p>Pokemon battle simulator.</p>
+                    <a href="https://pokemon-react-sandy.vercel.app/" class="btn" target="_blank" rel="noopener noreferrer">Coming Soon</a>
+                </div>
+                <div class="project">
+                    <h3>AI-Powered Content Creator</h3>
+                    <p>YouTube channel powered by OpenAI.</p>
+                    <a href="https://www.youtube.com/@DailyStories-i3jdg463ssf3" class="btn" target="_blank" rel="noopener noreferrer">Like & Subscribe</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Connect with me!</p>
+            <a href="https://www.linkedin.com/in/morgan-rupert11" class="btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </section>
+    </main>
+    <footer>
+        <p>Put something here</p>
+    </footer>
 </body>
 </html>
